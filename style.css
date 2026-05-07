@@ -1,0 +1,86 @@
+/* --- Global Reset --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+}
+
+/* --- Overlays --- */
+#overlay, #entry-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.8s ease;
+}
+
+#overlay { background: white; color: black; }
+#entry-button { background: black; color: #444; letter-spacing: 5px; }
+
+/* --- Containers --- */
+.video-container, #dialogue-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* --- Dialogue Styling --- */
+#dialogue-text, #active-text {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.8rem;
+    transition: opacity 0.5s ease;
+    letter-spacing: 2px;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Minimalist Red for YOU.html */
+.imposing-red {
+    color: #ff0000 !important;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* --- Link Styling --- */
+.hidden { display: none; }
+
+.link-you {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link-you:hover { color: white; }
